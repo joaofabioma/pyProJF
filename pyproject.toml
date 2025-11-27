@@ -1,0 +1,19 @@
+[tool.poetry.scripts]
+app = "app.cli:main"
+
+[tool.poetry]
+name = "App"
+version = "0.1.0"
+authors = ["Nome Autor <email@do_autor.com.br>"]
+readme = "README.md"
+packages = [{ include = "app", from = "src" }]
+
+[tool.poetry.dependencies]
+python = ">=3.13,<4.0"
+
+[tool.poetry.group.dev.dependencies]
+typer = "^0.20.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
