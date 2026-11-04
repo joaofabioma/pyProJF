@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+cd "$(dirname "$0")"
+
+if [ -f "./start.sh" ]; then
+  exec bash ./start.sh
+fi
+
+echo "Arquivo de inicialização não encontrado: ./start.sh" >&2
+exit 1
